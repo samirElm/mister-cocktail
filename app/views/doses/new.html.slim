@@ -1,0 +1,5 @@
+h1 = "Add a new dose to #{@cocktail.name}"
+= simple_form_for([@cocktail, @dose]) do |f|
+  = f.input :description
+  = f.input :ingredient_id, label: "Ingredient", as: :select, collection: Ingredient.all
+  = f.submit

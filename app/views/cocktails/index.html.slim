@@ -1,0 +1,12 @@
+h1.text-center All cocktails
+div.container
+  div.row
+    - @cocktails.each do |cocktail|
+      div.col-xs-12.col-sm-4
+          = link_to cocktail_path(cocktail) do ||
+            div.card
+              div.card-title.text-center
+                h3 = cocktail.name
+              = image_tag("#{cocktail.id}.jpg", class: 'bg-img')
+  div.text-center
+    = link_to 'Add a cocktail', new_cocktail_path, class: 'btn btn-success'

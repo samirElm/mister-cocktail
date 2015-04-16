@@ -1,0 +1,12 @@
+h1 Current cocktail
+= @cocktail.name
+br
+- @cocktail.doses.each do |dose|
+  =' dose.description
+  =' dose.ingredient.name
+  =' link_to 'Remove this dose', dose_path(dose), method: :delete
+  br
+= render 'form'
+
+br
+= link_to 'Back', cocktails_path
