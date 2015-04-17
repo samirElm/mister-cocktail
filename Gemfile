@@ -22,7 +22,12 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'slim'
 
+# Security on AWS S3
 gem 'figaro'
+
+# For paperclip and AWS S3
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -40,6 +40,11 @@ GEM
     autoprefixer-rails (5.1.9)
       execjs
       json
+    aws-sdk (1.64.0)
+      aws-sdk-v1 (= 1.64.0)
+    aws-sdk-v1 (1.64.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -52,6 +57,10 @@ GEM
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.7)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -90,6 +99,11 @@ GEM
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.18.1)
     puma (2.11.2)
       rack (>= 1.1, < 2.0)
@@ -188,6 +202,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (< 2.0)
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -197,6 +212,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
+  paperclip
   pg
   puma
   rails (= 4.2.1)

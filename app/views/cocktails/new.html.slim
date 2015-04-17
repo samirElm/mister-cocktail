@@ -1,4 +1,7 @@
 h1 Add a new cocktail
-= simple_form_for @cocktail do |f|
+= simple_form_for(@cocktail, html: { multipart: true }) do |f|
   = f.input :name
+  = f.file_field :picture
   = f.submit
+
+
