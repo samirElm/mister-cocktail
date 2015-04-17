@@ -7,12 +7,13 @@ nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation
         span class="icon-bar"
         span class="icon-bar"
 
-      a class="navbar-brand" href="#" = image_tag "logo.png"
+      = link_to '', cocktails_path, class: 'fa fa-glass'
 
     div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
       ul class="nav navbar-nav navbar-right"
-        li = link_to "#" do
-          i class="fa fa-envelope-o"
+        li = link_to "#"
+          button class="btn btn-success" type="button" Messages
+            <span class="badge">2</span>
 
         li class="dropdown"
           = link_to "#", {class: "dropdown-toggle", "data-toggle" => "dropdown", "role" => "button", "aria-expanded" => "false"} do
@@ -24,3 +25,7 @@ nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation
             li = link_to "link", "#"
             li = link_to "link", "#"
             li = link_to "Add something", "#", class: "btn"
+
+
+
+/

@@ -9,7 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% render 'layouts/navbar' %>
+  <%= render 'navbar' %>
+
+
+  <% if flash[:notice] %>
+    <div class="alert alert-success fade in">
+      <button class="close" data-dismiss="alert">×</button>
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
 
   <%= yield %>
 

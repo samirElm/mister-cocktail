@@ -1,6 +1,9 @@
 h1 Current cocktail
-= @cocktail.name
-= image_tag @cocktail.picture.url(:medium)
+= link_to cocktail_path(@cocktail) do ||
+  div.card
+    div.card-title.text-center
+      h3 = @cocktail.name
+    = image_tag @cocktail.picture.url(:medium), class: 'bg-img'
 br
 - @cocktail.doses.each do |dose|
   =' dose.description

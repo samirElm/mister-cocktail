@@ -1,12 +1,17 @@
-h1.text-center All cocktails
 div.container
+  h3.text-center Your drunk level:
+  div class="progress"
+    div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: 82%;" 82%
+  h3.text-center All cocktails
   div.row
-    - @cocktails.each do |cocktail|
+    - @cocktails[2..@cocktails.length].each do |cocktail|
       div.col-xs-12.col-sm-4
           = link_to cocktail_path(cocktail) do ||
             div.card
               div.card-title.text-center
                 h3 = cocktail.name
-              = image_tag("#{cocktail.id}.jpg", class: 'bg-img')
+              = image_tag cocktail.picture.url(:medium), class: 'bg-img'
   div.text-center
     = link_to 'Add a cocktail', new_cocktail_path, class: 'btn btn-success'
+
+/ chercher comment retirer les 2 premiers éléments pour la ligne 4
